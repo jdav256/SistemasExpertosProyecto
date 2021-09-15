@@ -1,0 +1,35 @@
+Semana 1
+software: 
+-Angular version.
+-MongoDB.
+-MongoDB Compass.
+-postman.
+-nodeJS.
+-visualStudio Code.
+
+
+Mockups a desarrollar:
+https://www.shopify.com/email-marketing
+--Landing Page-Gaby: 	menu de opciones informativas del sitio
+			boton Logeo de usuario,
+			boton Registro Usuario 
+			publicidad de empresas asociadas, 
+			mision vision,
+			pie del sitio(info, redes sociales).
+			informacion para empresas.
+			informacion para motoristas.
+Usuario
+--Formulario registro usuario-Gaby 
+--Formulario login-Gaby
+--pagina Inicial-Joselp (comercios,menu de direccionamiento del sitio,)
+Empresas
+--Formulario Registro Empresas -joselp
+--Formulario Registro Productos -joselp
+
+Motoristas
+--Formulario Registro de motoristas - joselp
+
+ideas para las diferentes colecciones:
+-usuarioFinal
+-motoristas
+-empresas
