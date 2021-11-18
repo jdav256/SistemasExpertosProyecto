@@ -1,0 +1,11 @@
+.navbar-dark .navbar-brand {
+    color: #3535f5;
+    justify-content: space-around;
+    align-items: flex-end;
+
+}
+.bg-dark {
+    background-color: #3535f5!important;
+    justify-content: space-around;
+    align-items: flex-end;
+}

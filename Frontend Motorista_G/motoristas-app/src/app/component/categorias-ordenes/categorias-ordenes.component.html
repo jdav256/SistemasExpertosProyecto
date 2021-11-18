@@ -1,0 +1,98 @@
+<div style="background-color: #3535fe;" [ngClass]="{'visible':regionVisibl == 'disponibles', 'no-visible':regionVisibl != 'disponibles'}">
+    <h1 >ORDENES DISPONIBLES</h1>
+</div>
+<div class="row" id="llenado-app" [ngClass]="{'visible':regionVisibl == 'disponibles', 'no-visible':regionVisibl != 'disponibles'}">
+    <div class="col-xl-2 col-lg-2 col-md-3 col-sm-4 col-6 " *ngFor="let orden of ordenesDisponibles">
+        <div class="card my-2" >
+                <img value="" src="" class="card-img-top app-img">
+                <div class="card-body app-img">
+                    <h5 class="card-title">{{orden.numeroDeOrden}}</h5>
+                    <p class="card-text">{{orden.direccion}}</p>
+                    <p> {{orden.cantidadProductos}}</p>
+                    <p> {{orden.total}}</p>
+                </div>
+        </div>
+    </div>
+    
+</div>
+
+<div style="background-color: #3535fe;" [ngClass]="{'visible':regionVisibl == 'noDisponible', 'no-visible':regionVisibl != 'noDisponible'}">
+    <h1 >ORDENES TOMADAS/NO ENTREGADAS</h1>
+</div>
+<div class="row" id="llenado-app" [ngClass]="{'visible':regionVisibl == 'noDisponible', 'no-visible':regionVisibl != 'noDisponible'}">
+    <div class="col-xl-2 col-lg-2 col-md-3 col-sm-4 col-6 " *ngFor="let orden of ordenesnoDisponibles">
+        <div class="card my-2"  >
+                <img value="" src="" class="card-img-top app-img">
+                <div class="card-body app-img">
+                    <h5 class="card-title">{{orden.numeroDeOrden}}</h5>
+                    <p class="card-text">{{orden.direccion}}</p>
+                    <p> {{orden.cantidadProductos}}</p>
+                    <p> {{orden.total}}</p>
+                    
+                </div>
+        </div>
+    </div>
+    
+</div>
+
+
+<div style="background-color: #3535fe;" [ngClass]="{'visible':regionVisibl == 'Ordisponibles', 'no-visible':regionVisibl != 'Ordisponibles'}">
+    <h1 > ENTREGADAS</h1>
+</div>
+<div class="row" id="llenado-app" [ngClass]="{'visible':regionVisibl == 'Ordisponibles', 'no-visible':regionVisibl != 'Ordisponibles'}">
+    <div class="col-xl-2 col-lg-2 col-md-3 col-sm-4 col-6 " *ngFor="let orden of ordenesEntregadas">
+        <div class="card my-2" (click)="detalleOrden(orden)" >
+                <img value="" src="" class="card-img-top app-img">
+                <div class="card-body app-img">
+                    <h5 class="card-title">{{orden.numeroDeOrden}}</h5>
+                    <p class="card-text">{{orden.direccion}}</p>
+                    <p> {{orden.cantidadProductos}}</p>
+                    <p> {{orden.total}}</p>
+                    
+                </div>
+        </div>
+    </div>
+    
+</div>
+
+<div style="background-color: #3535fe;" [ngClass]="{'visible':regionVisibl == 'detalle', 'no-visible':regionVisibl != 'detalle'}">
+    <h1 > ENTREGADAS</h1>
+</div>
+<div class="row" id="llenado-app" [ngClass]="{'visible':regionVisibl == 'detalle', 'no-visible':regionVisibl != 'detalle'}">
+    <div class="col-xl-2 col-lg-2 col-md-3 col-sm-4 col-6 " *ngFor="let orden of ordenesEntregadas">
+        <div class="card my-2" >
+                <img value="" src="" class="card-img-top app-img">
+                <div class="card-body app-img">
+                    <h5 class="card-title">OrdenActual</h5>
+                    tomada: <input type="radio" name="" id="" placeholder="radio"><br>
+                    en camino: <input type="radio" name="" id="" placeholder="radio"><br>
+                    en el origen: <input type="radio" name="" id="" placeholder="radio"><br>
+                    <div (click)="detalleOrdenTotal(orden)">
+                        en el destino: <input type="radio" name="" id="" placeholder="radio">
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+
+
+<div style="background-color: #3535fe;" [ngClass]="{'visible':regionVisibl == 'detalleor', 'no-visible':regionVisibl != 'detalleor'}">
+    <h1 > ENTREGADAS</h1>
+</div>
+<div class="row" id="llenado-app" [ngClass]="{'visible':regionVisibl == 'detalleor', 'no-visible':regionVisibl != 'detalleor'}">
+    <div class="col-xl-2 col-lg-2 col-md-3 col-sm-4 col-6 ">
+        <div class="card my-2"  >
+                <img value="" src="" class="card-img-top app-img">
+                <div class="card-body app-img">
+                    <h5 class="card-title">Orden Actual</h5>
+                    <p class="card-text">tipo de Pago: targeta de credito</p>
+                    <p>ISV: 18% </p>
+                    <p>Comision administracion:80% </p>
+                    <p>Comision Motorista:20% </p>
+                    
+                </div>
+        </div>
+    </div>
+    
+</div>
+

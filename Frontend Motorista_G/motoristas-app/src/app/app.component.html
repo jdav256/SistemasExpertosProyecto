@@ -1,0 +1,17 @@
+<app-encabezado [ngClass]="{'visible':regionVisible == 'ordenes', 'no-visible':regionVisible != 'login'}"></app-encabezado>
+<div [ngClass]="{'visible':regionVisible == 'ordenes', 'no-visible':regionVisible != 'login'}">
+    <app-principal (onVerOrdenes)="verOrdenes($event)"></app-principal>
+</div>
+<div [ngClass]="{'visible':regionVisible == 'login', 'no-visible':regionVisible != 'ordenes'}">
+    <app-ordenes #ordenes  (onVerOrdeneDisponibles)="verOrdenesDisponibles($event)"></app-ordenes>
+</div>
+
+<div [ngClass]="{'visible':regionVisible == 'login' , 'no-visible':regionVisible != 'ordenesDisponibles'}">
+    <app-ordenes #ordenes  (onVerOrdeneDisponibles)="verOrdenesDisponibles($event)" (onVerOrdenesNoDisponibles)="verOrdenesNodisponibles($event)" (onVerOrdenesEntregadas)="verOrdenesEntregadas($event)"></app-ordenes>
+    <app-categorias-ordenes #ordenesDisponibles></app-categorias-ordenes>
+</div>
+
+<app-pie-panina [ngClass]="{'visible':regionVisible == 'ordenes', 'no-visible':regionVisible != 'login'}"></app-pie-panina>
+
+
+

@@ -1,0 +1,13 @@
+#llenado-app{
+    justify-content: center;
+}
+.visible{
+    display: flex;
+}
+.no-visible{
+    display: none;
+}
+h1{
+    align-content: center;
+    color: white;
+}

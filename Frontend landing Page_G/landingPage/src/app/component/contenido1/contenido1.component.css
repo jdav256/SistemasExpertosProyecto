@@ -1,0 +1,28 @@
+.navbar-dark .navbar-brand {
+    color: #3535f5;
+}
+.bg-dark {
+    background-color: #3535f5!important;
+}
+
+.navbar {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+
+}
+.tipoLetra{
+    font-size:xx-small;
+    font-family:cursive;
+    text-align: center;
+}
+
+h1{
+    color: #1201fe;
+    font-size: 1.5rem;
+}
+
+
+
