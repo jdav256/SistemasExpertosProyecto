@@ -1,2 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
 
+body {
+    background-color: #054a91;
+    
+}
+.nav-link {
+    color: white !important;
+}
+
+.nav-link:hover {
+    color: #f17300 !important;
+}
+
+.navbar {
+    font-family: "Raleway medium";
+}
+.container-links {
+    height: calc(100vh - 56px);
+    background-color: var(--main-color);
+}
+
+.orange-figure {
+    fill: transparent;
+    stroke: #F17300;
+    stroke-width: 3;
+}
+.text-footer {
+    color: white;
+    position: absolute;
+    box-sizing: border-box;
+    padding: 1% 5%;
+    font-family: 'Raleway medium';
+}
+html,
+body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}

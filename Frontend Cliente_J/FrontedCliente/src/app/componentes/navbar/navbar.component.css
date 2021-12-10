@@ -1,0 +1,10 @@
+.navbarColors{
+    background-color:rgb(63, 56, 56) !important;
+}
+
+.visible{
+    display: block;
+  }
+.no-visible{
+    display: none;
+  }

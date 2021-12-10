@@ -1,0 +1,25 @@
+
+.contenido{
+    display: flex;
+}
+.publicidad1{
+    color:black;
+    display: flex;
+	flex-direction: column
+}
+.tipoLetra{
+    font-family:cursive;
+    text-align: center;
+}
+.btn-primary {
+    color: #0000DE;
+    background-color: #0000de00;
+    border-color: #0000DE;
+    border-radius: 30px;
+    font-size: 3rem;
+    border: 4px solid #0000DE;
+}
+.botonRegistrarse{
+    margin-left: auto;
+    margin-right: auto;
+}
