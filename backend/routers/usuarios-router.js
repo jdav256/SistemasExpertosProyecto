@@ -18,6 +18,19 @@ router.get('/',function(req, res) {
     
 });
 
+router.get('/clientes',function(req, res) {
+    usuario.find({ 'estado':"desactivado"},{})
+    .then(result=>{
+        res.send(result);
+        res.end();
+    })
+    .catch(error=>{
+        res.send(error);
+        res.end();
+    });
+    
+});
+
 router.post('/', async function(req, res) {
     console.log('se hizo una solicitud para crear usuario');
     const correo = req.body.correo;
