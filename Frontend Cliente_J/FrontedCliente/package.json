@@ -26,8 +26,11 @@
     "@fortawesome/free-regular-svg-icons": "^5.15.2",
     "@fortawesome/free-solid-svg-icons": "^5.15.2",
     "@ng-bootstrap/ng-bootstrap": "^11.0.0-beta.2",
+    "angular-responsive-carousel": "^2.1.2",
     "bootstrap": "^4.5.0",
     "ng-media-query": "^1.0.3",
+    "primeicons": "^5.0.0",
+    "primeng": "^13.0.2",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.3"

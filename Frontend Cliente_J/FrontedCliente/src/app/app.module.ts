@@ -15,6 +15,10 @@ import { PrimerEncabezadoComponent } from './landingPage/primer-encabezado/prime
 import { RegistroPaginaComponent } from './registro/registro-pagina/registro-pagina.component';
 import {HttpClientModule} from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CarouselComponent } from './paginaPricipal/carousel/carousel.component';
+import { IvyCarouselModule } from 'angular-responsive-carousel';
+import { TiendasComponent } from './paginaPricipal/tiendas/tiendas.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +29,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     PiePaginaComponent,
     Contenido1Component,
     PrimerEncabezadoComponent,
-    RegistroPaginaComponent
+    RegistroPaginaComponent, 
+    CarouselComponent, TiendasComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -34,7 +40,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FontAwesomeModule,
     HttpClientModule,
     FormsModule, 
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    IvyCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

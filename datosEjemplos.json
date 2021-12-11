@@ -1,0 +1,170 @@
+
+//insertar usuarios con tiendas
+db.usuarios.insertMany(
+[
+    {
+        "_id":ObjectId("61b4278e1983cfce38946bbe"),
+        "name":"joselp daniel aguilar ",
+        "correo":"joselp1256@hotmail.es",
+        "password":"asd",
+        "tipoUsuario":2,
+        "ubicacion":[],
+        "medioPago":[],
+        "estado":"activo",
+        "favoritos":[],
+        "carrito":[],
+        "__v":0
+    },
+    {
+        "_id":ObjectId("61b4278e1983cfce38946bbf"),
+        "name":"joselp daniel aguilar ",
+        "correo":"joselp2256@hotmail.es",
+        "password":"asd",
+        "tipoUsuario":2,
+        "ubicacion":[],
+        "medioPago":[],
+        "estado":"activo",
+        "favoritos":[],
+        "carrito":[],
+        "__v":0
+    },
+    {
+        "_id":ObjectId("61b4278e1983cfce38946bc0"),
+        "name":"joselp daniel aguilar ",
+        "correo":"joselp3256@hotmail.es",
+        "password":"asd",
+        "tipoUsuario":2,
+        "ubicacion":[],
+        "medioPago":[],
+        "estado":"activo",
+        "favoritos":[],
+        "carrito":[],
+        "__v":0
+    },
+    {
+        "_id":ObjectId("61b4278e1983cfce38946bc1"),
+        "name":"joselp daniel aguilar ",
+        "correo":"joselp4256@hotmail.es",
+        "password":"asd",
+        "tipoUsuario":2,
+        "ubicacion":[],
+        "medioPago":[],
+        "estado":"activo",
+        "favoritos":[],
+        "carrito":[],
+        "__v":0
+    }
+]);
+
+//insertar tiendas
+
+db.tiendas.insertMany([
+    {
+        "_id":ObjectId("61b42c7c1983cfce38946bc2"),
+        "nombre":"Dennys",
+        "categoria":"restaurantes",
+        "urlLogo":"/tienda/dennys",
+        "ubiaciones":[
+            {
+                "titulo":"dennys bulevard Morazan",
+                "latitud":14.5512,
+                "longitud":-86.45123,
+                "detalle":"Boulevard Juan Pablo II, Tegucigalpa"
+            }],
+        "usuarioID":ObjectId("61b4278e1983cfce38946bbe"),
+        "productosPromo":[],
+        "calificaciones":[],
+        "categoriasProductos":[] 
+    },
+    {
+        "_id":ObjectId("61b42c7c1983cfce38946bc3"),
+        "nombre":"Pizza Hut",
+        "categoria":"restaurantes",
+        "urlLogo":"/tienda/pizzaHut",
+        "ubiaciones":[
+            {
+                "titulo":"pizzaHut bulevard Morazan",
+                "latitud":14.5512,
+                "longitud":-86.45123,
+                "detalle":"Boulevard Juan Pablo II, Tegucigalpa"
+            }],
+        "usuarioID":ObjectId("61b4278e1983cfce38946bbf"),
+        "productosPromo":[],
+        "calificaciones":[],
+        "categoriasProductos":["comida","Complemento"]   
+    },
+    {
+        "_id":ObjectId("61b42c7c1983cfce38946bc4"),
+        "nombre":"Addidas",
+        "categoria":"restaurantes",
+        "urlLogo":"/tienda/addidas",
+        "ubiaciones":[
+            {
+                "titulo":"addidas bulevard Morazan",
+                "latitud":14.5512,
+                "longitud":-86.45123,
+                "detalle":"Boulevard Juan Pablo II, Tegucigalpa"
+            }],
+        "usuarioID":ObjectId("61b4278e1983cfce38946bc0"),
+        "productosPromo":[],
+        "cafilicaciones":[],
+        "categoriasProductos":["calzado"]   
+    },
+    
+
+])
+
+db.productos.insertMany([
+    {
+        
+        "nombreProducto":"Pizza de peperoni",
+        "idTienda":ObjectId("61b42c7c1983cfce38946bc3"),
+        "precio":"12.00",
+        "detalle":"RESUMEN",
+        "opciones":[],
+        "tamano":"ANCHO_ALTO_LARGO",
+        "disponible":1,
+        "vendidos":100,
+        "urlImagen":"/producto/nombreProducto.jpg",
+        "categoria":"comida"
+
+    },
+    {
+        
+        "nombreProducto":"Calzone",
+        "idTienda":ObjectId("61b42c7c1983cfce38946bc3"),
+        "precio":"12.26",
+        "detalle":"RESUMEN",
+        "opciones":[],
+        "tamano":"ANCHO_ALTO_LARGO",
+        "disponible":1,
+        "vendidos":100,
+        "urlImagen":"/producto/nombreProducto.jpg",
+        "categoria":"comida"
+    },
+    {
+        
+        "nombreProducto":"Palitroques",
+        "idTienda":ObjectId("61b42c7c1983cfce38946bc3"),
+        "precio":"12.26",
+        "detalle":"RESUMEN",
+        "opciones":[],
+        "tamano":"ANCHO_ALTO_LARGO",
+        "disponible":1,
+        "vendidos":100,
+        "urlImagen":"/producto/nombreProducto.jpg",
+        "categoria":"Complemento"
+    },
+    {
+        
+        "nombreProducto":"Tennis Addidas Negros XXL",
+        "idTienda":ObjectId("61b42c7c1983cfce38946bc4"),
+        "precio":"12.00",
+        "detalle":"RESUMEN",
+        "opciones":[],
+        "tamano":"ANCHO_ALTO_LARGO",
+        "disponible":1,
+        "vendidos":100,
+        "urlImagen":"/producto/tennisNegros.jpg",
+        "categoria":"Calzado"
+    }])    
