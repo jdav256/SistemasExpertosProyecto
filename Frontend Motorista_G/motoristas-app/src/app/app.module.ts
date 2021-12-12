@@ -10,6 +10,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { PiePaninaComponent } from './component/pie-panina/pie-panina.component';
 import { OrdenesComponent } from './component/ordenes/ordenes.component';
 import { CategoriasOrdenesComponent } from './component/categorias-ordenes/categorias-ordenes.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { CategoriasOrdenesComponent } from './component/categorias-ordenes/categ
     BrowserModule,
     NgbModule,
     FontAwesomeModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

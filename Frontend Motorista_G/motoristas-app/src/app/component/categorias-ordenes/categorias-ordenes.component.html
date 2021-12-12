@@ -2,7 +2,7 @@
     <h1 >ORDENES DISPONIBLES</h1>
 </div>
 <div class="row" id="llenado-app" [ngClass]="{'visible':regionVisibl == 'disponibles', 'no-visible':regionVisibl != 'disponibles'}">
-    <div class="col-xl-2 col-lg-2 col-md-3 col-sm-4 col-6 " *ngFor="let orden of ordenesDisponibles">
+    <div  class="col-xl-2 col-lg-2 col-md-3 col-sm-4 col-6 " *ngFor="let orden of Disponibles">
         <div class="card my-2" >
                 <img value="" src="" class="card-img-top app-img">
                 <div class="card-body app-img">
@@ -11,6 +11,7 @@
                     <p> {{orden.cantidadProductos}}</p>
                     <p> {{orden.total}}</p>
                 </div>
+                <button class="btn btn-primary" (click)="abrirmodalAsignacionProducto(modalproducto, orden._id)">Tomar Orden</button>
         </div>
     </div>
     
@@ -30,6 +31,7 @@
                     <p> {{orden.total}}</p>
                     
                 </div>
+                <button class="btn btn-primary" (click)="abrirmodalEstadoProducto(modalEstadoproducto, orden._id)">Ver estado</button>
         </div>
     </div>
     
@@ -41,7 +43,7 @@
 </div>
 <div class="row" id="llenado-app" [ngClass]="{'visible':regionVisibl == 'Ordisponibles', 'no-visible':regionVisibl != 'Ordisponibles'}">
     <div class="col-xl-2 col-lg-2 col-md-3 col-sm-4 col-6 " *ngFor="let orden of ordenesEntregadas">
-        <div class="card my-2" (click)="detalleOrden(orden)" >
+        <div class="card my-2">
                 <img value="" src="" class="card-img-top app-img">
                 <div class="card-body app-img">
                     <h5 class="card-title">{{orden.numeroDeOrden}}</h5>
@@ -50,6 +52,7 @@
                     <p> {{orden.total}}</p>
                     
                 </div>
+                <button class="btn btn-primary" (click)="abrirmodalDetalles(modalDetallesproducto, orden)">Detalles De La Orden</button>
         </div>
     </div>
     
@@ -96,3 +99,59 @@
     
 </div>
 
+    <!-- Ventana modal producto -->
+    <ng-template #modalproducto let-modal>
+        <div class="modal-header">
+          <h4 class="modal-title" id="modal-basic-title">Orden asignada</h4>
+          <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cerro con la X')">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h1 style="color: #1f1fd1;">su orden a sido asignada exitosamente</h1>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-success" (click)="modal.close('Boton Cerrar')" (click)="cambiarEstadoOrden(motistaActual)">continuar</button>
+          
+        </div>
+      </ng-template>
+
+      <!-- Ventana estado producto -->
+    <ng-template #modalEstadoproducto let-modal>
+        <div class="modal-header">
+          <h4 class="modal-title" id="modal-basic-title">Ordenes alladin</h4>
+          <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cerro con la X')">
+            <span aria-hidden="true">&times;</span><h1 style="color: #1f1fe4;">La orden esta en camino</h1>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h1>La orden esta en camino</h1>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-success" (click)="modal.close('Boton Cerrar')" (click)="cambiarAEstadoFinal(motistaActual)">Entregar Orden</button>
+          
+        </div>
+      </ng-template>
+
+            <!-- Ventana estado Detalles-->
+    <ng-template #modalDetallesproducto let-modal>
+        <div class="modal-header">
+          <h4 class="modal-title" id="modal-basic-title">Detalles de la orden entregada</h4>
+          <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cerro con la X')">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div >
+            <h5 class="card-title">{{ordenActual.numeroDeOrden}}</h5>
+            <p class="card-text">{{ordenActual.detalleEstado[0].tipoDePago}}</p>
+            <p>ISV: {{ordenActual.detalleEstado[0].ISV}}</p>
+            <p>{{ordenActual.detalleEstado[0].comisionAdministracion}}</p>
+            <p>{{ordenActual.detalleEstado[0].comisionMotorista}}</p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-success" (click)="modal.close('Boton Cerrar')">Cerrar</button>
+          
+        </div>
+      </ng-template>

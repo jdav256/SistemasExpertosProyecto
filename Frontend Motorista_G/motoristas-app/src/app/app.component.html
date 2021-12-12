@@ -1,7 +1,10 @@
 <app-encabezado [ngClass]="{'visible':regionVisible == 'ordenes', 'no-visible':regionVisible != 'login'}"></app-encabezado>
 <div [ngClass]="{'visible':regionVisible == 'ordenes', 'no-visible':regionVisible != 'login'}">
-    <app-principal (onVerOrdenes)="verOrdenes($event)"></app-principal>
+    <app-principal (onVerOrdenes)="verOrdenes($event)"  ></app-principal>
 </div>
+
+
+
 <div [ngClass]="{'visible':regionVisible == 'login', 'no-visible':regionVisible != 'ordenes'}">
     <app-ordenes #ordenes  (onVerOrdeneDisponibles)="verOrdenesDisponibles($event)"></app-ordenes>
 </div>

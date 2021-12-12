@@ -8,8 +8,10 @@ var esquema = new mongoose.Schema(
         direccion: String,
         cantidadProductos: String,
         total: Number ,
-        estadoOrden: Object,
+        estadoOrden: String,
+        idUsuario:String,
         detalleEstado: Array
+
     }
 );
 

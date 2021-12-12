@@ -12,22 +12,31 @@ export class AppComponent {
   @ViewChild('ordenes')
   OrdenesComponent: OrdenesComponent = new OrdenesComponent;
   @ViewChild('ordenesDisponibles')
-  CategoriasOrdenesComponent: CategoriasOrdenesComponent = new CategoriasOrdenesComponent;
+  CategoriasOrdenesComponent!: CategoriasOrdenesComponent;
   title = 'motoristas-app';
   regionVisible:string = 'login';
+  motoristaActual:any="";
 
-  verOrdenes(ordenes:any){
+  verOrdenes(motorista:any){
+    this.motoristaActual=motorista
+    console.log("usuario enviado desde principal", this.motoristaActual)
     this.regionVisible='ordenes'; 
     this.OrdenesComponent.obtenerOrdenes();
     console.log( 'la region visible es ',this.regionVisible)
   }
-  verOrdenesDisponibles(ordenDisponible:any){
-    console.log("llegando ordenes a App", ordenDisponible);
+  verOrdenesDisponibles(inicio:string){
+    console.log("llegando ordenes a App", inicio);
     this.regionVisible='ordenesDisponibles'
+    this.CategoriasOrdenesComponent.motistaActual=this.motoristaActual;
     this.CategoriasOrdenesComponent.verTodasLasOrdenesDisponibles();
+    
   }
-  verOrdenesNodisponibles(ordenesnoDisponibles:any){
-    console.log("llegando a app con tipoOrden", ordenesnoDisponibles);
+  verOrdenesNodisponibles(usuarioActual:any){
+    //this.regionVisible="ordenesNodisponibles"
+    this.CategoriasOrdenesComponent.motistaActual=this.motoristaActual;
+    console.log("llegando a app BUSCANDO ORDENES NO DISPONIBLES CON EL USUARIO", usuarioActual);
+    console.log("el id del usuario actual buscando ordenes disponibles es ", usuarioActual._id)
+    //this.CategoriasOrdenesComponent.motistaActual=this.motoristaActual;
     this.CategoriasOrdenesComponent.verTodasLasOrdenesnoDisponibles();
   }
   verOrdenesEntregadas(ordenesEntregadas:any){

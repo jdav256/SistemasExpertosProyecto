@@ -4,8 +4,8 @@ var disponiblesor = require('../models/ordenesDis');
 var mongoose = require('mongoose');
 
 //Obtener ordenes
-router.get('/',function (req, res){
-    disponiblesor.find({})
+router.get('/:estadoOrden',function (req, res){
+    disponiblesor.find({estadoOrden: req.params.estadoOrden},{})
     .then(result=>{
         res.send(result);
         res.end();
@@ -14,6 +14,85 @@ router.get('/',function (req, res){
         res.send(error);
         res.end();
     });
+});
+
+//Obtener  ordenes especificas de un usuario de un usuario
+router.get('/:idUsuario/:estadoOrden',function (req, res){
+    disponiblesor.find({
+        idUsuario:req.params.idUsuario,
+        estadoOrden: req.params.estadoOrden
+        
+    },{})
+    .then(result=>{
+        res.send(result);
+        res.end();
+    })
+    .catch(error=>{
+        res.send(error);
+        res.end();
+    });
+});
+//Actualizar estado de la orden
+router.put("/:idOrden", (req, res) => {
+	disponiblesor.updateOne(
+			{
+				_id: mongoose.Types.ObjectId(req.params.idOrden),
+			},
+			{
+				$set: {
+					"estadoOrden": req.body.estadoOrden,
+                    "idUsuario": req.body.idUsuario
+				},
+			}
+		)
+		.then((result) => {
+			res.send(result);
+			res.end();
+		})
+		.catch((error) => {
+			res.send(error);
+			res.end();
+		});
+});
+
+//Obtener el detalle de una orden
+router.get('/:idOrden',function (req, res){
+    disponiblesor.find(
+        {
+            _id: mongoose.Types.ObjectId(req.params.idOrden)
+        },
+        {
+            detalleEstado:true
+        })
+    .then(result=>{
+        res.send(result[0]);
+        res.end();
+    })
+    .catch(error=>{
+        res.send(error);
+        res.end();
+    });
+});
+//Actualizar el usuario a la orden
+router.put("/:idOrden/orden", (req, res) => {
+	disponiblesor.updateOne(
+			{
+				_id: mongoose.Types.ObjectId(req.params.idOrden),
+			},
+			{
+				$set: {
+					"idUsuario": req.body.idUsuario
+				},
+			}
+		)
+		.then((result) => {
+			res.send(result);
+			res.end();
+		})
+		.catch((error) => {
+			res.send(error);
+			res.end();
+		});
 });
 
 

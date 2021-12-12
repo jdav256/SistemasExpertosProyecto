@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { NgModule } from '@angular/core';
 
 
 @Component({
@@ -10,7 +11,7 @@ export class OrdenesComponent implements OnInit {
   @Output() onVerOrdeneDisponibles= new EventEmitter();
   @Output() onVerOrdenesNoDisponibles= new EventEmitter();
   @Output() onVerOrdenesEntregadas=new EventEmitter();
-  
+  tipoOrden:string="inicio";
   ordenesTomadasnoEntregadas:any=[{}];
   ordenesEntregadas:any=[{}];
   constructor() { }
@@ -20,14 +21,14 @@ export class OrdenesComponent implements OnInit {
   obtenerOrdenes(){
     console.log('se probo')
   }
-  abrirOrdenesDisponibles(ordenesDisponibles:any){
-    console.log('estado en ordenes',ordenesDisponibles);
+  abrirOrdenesDisponibles(inicio:string){
+    console.log('estado en ordenes',inicio);
     this.onVerOrdeneDisponibles.emit('ordenesDisponibles');
     
   }
-  abrirOrdenesnoDisponibles(ordenesnoDisponibles:any){
-    console.log('estado en ordenes  no  ordenes', ordenesnoDisponibles);
-    this.onVerOrdenesNoDisponibles.emit('ordenesNodisponibles');
+  abrirOrdenesnoDisponibles(inicio:string){
+    console.log('estado en ordenes  no  ordenes', inicio);
+    this.onVerOrdenesNoDisponibles.emit(inicio);
   }
   ordenesEntregadass(ordenesEntregadas:any){
     console.log('estado en ordenes entregadas' , ordenesEntregadas);
