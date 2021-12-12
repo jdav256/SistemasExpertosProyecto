@@ -18,6 +18,8 @@ router.get('/',function(req, res) {
     
 });
 
+
+
 router.post('/', async function(req, res) {
     console.log('se hizo una solicitud para crear usuario');
     const correo = req.body.correo;
@@ -55,7 +57,7 @@ router.post('/login',function (req, res) {
     },{})
     .then(result=>{
         if(result==null){
-            res.send("usuario y contraseña no coinciden");
+            res.status(200).json({ 'message': 'falla de usuario y contrasena' });
             res.end();
         }else{
             res.send(result);

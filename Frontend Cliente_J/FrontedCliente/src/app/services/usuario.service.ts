@@ -22,6 +22,11 @@ export class UsuarioService {
   getLocalUser():any{
     return JSON.parse(localStorage.getItem('usuario'));
   }
+
+  getLocalCarrito(){
+    return JSON.parse(localStorage.getItem('carrito'));
+  };
+
   logout(){
     return localStorage.removeItem('usuario');
   }

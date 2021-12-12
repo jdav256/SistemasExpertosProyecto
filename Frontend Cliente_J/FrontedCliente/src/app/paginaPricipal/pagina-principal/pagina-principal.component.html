@@ -1,1 +1,50 @@
-<p>pagina-principal works!</p>
+
+<div class="container-fluid pt-2" style="background-color: bisque;" >
+    <div class="row" >
+        <div class="col-sm-4 col-2">
+
+        </div>
+        <div class="col-sm-4 col-6">
+            <h1 class="text-center">CATEGORIAS</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-2">
+
+        </div>
+        <div class="col-8">
+            <app-carousel #carouselCategorias (onSeleccionarCategoria)="verCategorias($event)" ></app-carousel>
+        </div>
+        <div class="col-2">
+
+        </div>
+        
+    </div>
+    <br>
+</div>
+<div class="container-fluid pt-2">
+    <div class="row">
+        <div class="col-sm-3 col-2">
+
+        </div>
+        <div class="col-sm-6 col-8">
+            <h1 class="text-center" STYLE="color:white;">TIENDAS RECOMENDADAS</h1>
+        </div>
+        <div class="col-sm-3 col-2" ></div>
+    </div>
+    <div class="row p-2">
+        
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 my-2 p-2" *ngFor="let tienda of tiendas; let i=index">
+            <div class="card" style="width: auto; height: auto" (click)="cargarTienda(i)" >
+                
+                <img [src]="'../../../assets'+tienda.urlLogo" class="card-img-top mt-2" style="width:90%; height:90%; margin-left: auto; margin-right: auto;" alt="..." >
+                
+                <div class="card-body" style="padding:0%; margin-left: 1rem; margin-bottom: 1rem;">
+                    <h5 class="text-center" >Calificaciones:<br>X X X X X</h5> 
+                </div>
+            </div>
+        </div>
+        
+
+    </div>
+</div>

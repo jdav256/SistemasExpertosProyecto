@@ -6,7 +6,8 @@ var cors = require('cors');
 var database = require('./modulos/database'); 
 // conexion con la base de datos
 var usuariosRouter = require('./routers/usuarios-router');
-
+var tiendasRouter = require('./routers/tiendas-router');
+var productoRouter = require('./routers/productos-router');
 //var cancionesRouter = require('./routes/canciones-router');
 
 app.use(cors());// permita peticiones de otros origenes
@@ -15,7 +16,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 // permite enviar informacion en formato urlencoded
 app.use('/usuarios',usuariosRouter);
-
+app.use('/tiendas',tiendasRouter);
+app.use('/productos',productoRouter);
 
 app.listen(8888,function(){
     console.log('servidor levantado');

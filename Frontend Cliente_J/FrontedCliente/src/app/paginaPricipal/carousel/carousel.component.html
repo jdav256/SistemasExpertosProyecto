@@ -1,0 +1,5 @@
+<carousel autoplay="true"  autoplayInterval="2000">
+    <div *ngFor="let categoria of categorias; let i=index" class="carousel-cell"  >
+        <img class="" [ngClass]="categoria.class" [src]="categoria.path" (click)="seleccionarCategoria(categoria.nombre,i)" style="width:90%; height:90%">
+    </div>
+</carousel>

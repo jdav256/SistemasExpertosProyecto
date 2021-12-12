@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light navbarColors">
-  <a class="navbar-brand mr-5 pr-5" routerLink="" ><img src="../../../assets/img/aladinLetrasLogo.png" style="width: 180px;"></a>
+  <a class="navbar-brand mr-5 pr-5 btn" (click)="logo()"  ><img src="../../../assets/img/aladinLetrasLogo.png" style="width: 180px;"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -7,35 +7,35 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item" *ngIf="router.isActive('/',true)">
-          <a class="nav-link" href="#">Info</a>
+          <a class="nav-link grow" >Info</a>
         </li>
         <li class="nav-item" *ngIf="router.isActive('/',true)">
-          <a class="nav-link"  href="#">Quieres trabajar con nostros?</a>
+          <a class="nav-link grow"  >Quieres trabajar con nostros?</a>
         </li>
-        <li class="nav-item"*ngIf="router.isActive('/usuario',true)">
-          <a class="nav-link"  href="#">Carrito</a>
+        <li class="nav-item" *ngIf="urlActiva.substring(0,8) =='/usuario'">
+          <a class="nav-link grow btn"  >Configuracion</a>
         </li>
-        <li class="nav-item" *ngIf="router.isActive('/usuario',true)">
-          <a class="nav-link"  href="#">Activos</a>
+        <li class="nav-item grow" *ngIf="urlActiva.substring(0,8) =='/usuario'">
+          <fa-icon class="nav-link grow btn" size="2x" [icon]="faShoppingCart"></fa-icon>
         </li>
-        <li class="nav-item" *ngIf="router.isActive('/usuario',true)">
-          <a class="nav-link"  href="#">Siguiendo</a>
+        <li class="nav-item" *ngIf="urlActiva.substring(0,8) =='/usuario'">
+          <a class="nav-link grow btn" > Pedidos Activos</a>
+        </li>
+        <li class="nav-item" *ngIf="urlActiva.substring(0,8) =='/usuario'" >
+          <a class="nav-link grow btn" >Siguiendo</a>
         </li>  
         <li class="nav-item" *ngIf="router.isActive('/',true)">
-          <a class="btn"  routerLink="/registro">Registrarse</a>
+          <a class="nav-link grow"  routerLink="/registro">Registrarse</a>
         </li>  
         
       </ul>
       <ul>
         <button 
-        [ngClass]="{'visible' :router.isActive('/usuario',true) ,'no-visible':!router.isActive('/usuario',true) }"
-        class="btn btn-nav btn-outline-primary">configuracion Usuario</button>
-        <button 
         [ngClass]="{'visible' :router.isActive('/',true) ,'no-visible':!router.isActive('/',true) }"
         class="btn btn-nav btn-outline-primary" (click)="abrirPagina('login')">Login</button>
         <button 
-        [ngClass]="{'visible' :router.isActive('/usuario',true) ,'no-visible':!router.isActive('/usuario',true) }"
-        class="btn btn-nav btn-outline-primary">Logut</button>
+        [ngClass]="{'visible' :urlActiva.substring(0,8) =='/usuario' ,'no-visible':!(urlActiva.substring(0,8)=='/usuario') }"
+        class="btn btn-nav btn-outline-primary" (click)="logout()" >Logut</button>
         
       </ul>
       
