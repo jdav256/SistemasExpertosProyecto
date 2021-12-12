@@ -1,0 +1,222 @@
+use motoristas
+db.usuarios.insertMany([
+    {
+        "_id": ObjectId("611925dec79819a64e3d7e11"),
+        "nombre": "Marco",
+        "apellido": "Martinez",
+        "usuario": "marco@gmail.com",
+        "contrasena": "marcoMartinez5"
+    },
+    {
+        "_id": ObjectId("611925dec79819a64e3d7e12"),
+        "nombre": "Mario",
+        "apellido": "Mendoza",
+        "usuario": "mario@gmail.com",
+        "contrasena": "marioMendoza5"
+    },
+    {
+        "_id": ObjectId("611925dec79819a64e3d7e13"),
+        "nombre": "Marcio",
+        "apellido": "Mejia",
+        "usuario": "marcio@gmail.com",
+        "contrasena": "marcioMejia5"
+    },
+    {
+        "_id": ObjectId("611925dec79819a64e3d7e14"),
+        "nombre": "Andres",
+        "apellido": "lopez",
+        "usuario": "andres@gmail.com",
+        "contrasena": "andreslopez5"
+    }
+    
+])
+db.disponibles.insertMany([
+    {
+        "_id": ObjectId("611925dec79819a64e3d7e20"),
+        "numeroDeOrden":"Orden#1",
+        "direccion":"Direccion: Colonia kennedy cas 5 bloque 6",
+        "cantidadProductos":"Cantidad de productos: 2",
+        "total":300,
+        "estadoOrden": "inicio",
+        "idUsuario":"porIngresar",
+        "detalleEstado":[
+            {
+                "tipoDePago" : "tarjeta De Credito",
+                "ISV" : "18%",
+                "comisionAdministracion":"Comision Administracion: 80%",
+                "comisionMotorista":"Comision Motorista: 20%"
+            }
+        ]
+    },
+    {
+        "_id": ObjectId("611925dec79819a64e3d7e21"),
+        "numeroDeOrden":"Orden#2",
+        "direccion":"Direccion: Colonia kennedy cas 5 bloque 6",
+        "cantidadProductos":"Cantidad de productos: 2",
+        "total":300,
+        "estadoOrden": "inicio",
+        "idUsuario":"porIngresar",
+        "detalleEstado":[
+            {
+                "tipoDePago" : "tarjeta De Credito",
+                "ISV" : "18%",
+                "comisionAdministracion":"Comision Administracion: 80%",
+                "comisionMotorista":"Comision Motorista: 20%"
+            }
+        ]
+    },
+    {
+        "_id": ObjectId("611925dec79819a64e3d7e22"),
+        "numeroDeOrden":"Orden#3",
+        "direccion":"Direccion: Colonia kennedy cas 5 bloque 6",
+        "cantidadProductos":"Cantidad de productos: 2",
+        "total":300,
+        "estadoOrden": "inicio",
+        "idUsuario":"porIngresar",
+        "detalleEstado":[
+            {
+                "tipoDePago" : "tarjeta De Credito",
+                "ISV" : "18%",
+                "comisionAdministracion":"Comision Administracion: 80%",
+                "comisionMotorista":"Comision Motorista: 20%"
+            }
+        ]
+    },
+    {
+        "_id": ObjectId("611925dec79819a64e3d7e23"),
+        "numeroDeOrden":"Orden#4",
+        "direccion":"Direccion: Colonia kennedy cas 5 bloque 6",
+        "cantidadProductos":"Cantidad de productos: 2",
+        "total":300,
+        "estadoOrden": "inicio",
+        "idUsuario":"porIngresar",
+        "detalleEstado":[
+            {
+                "tipoDePago" : "tarjeta De Credito",
+                "ISV" : "18%",
+                "comisionAdministracion":"Comision Administracion: 80%",
+                "comisionMotorista":"Comision Motorista: 20%"
+            }
+        ]
+    },
+    {
+        "_id": ObjectId("611925dec79819a64e3d7e24"),
+        "numeroDeOrden":"Orden#5",
+        "direccion":"Direccion: Colonia kennedy cas 5 bloque 6",
+        "cantidadProductos":"Cantidad de productos: 2",
+        "total":300,
+        "estadoOrden": "inicio",
+        "idUsuario":"porIngresar",
+        "detalleEstado":[
+            {
+                "tipoDePago" : "tarjeta De Credito",
+                "ISV" : "18%",
+                "comisionAdministracion":"Comision Administracion: 80%",
+                "comisionMotorista":"Comision Motorista: 20%"
+            }
+        ]
+    },
+    {
+        "_id": ObjectId("611925dec79819a64e3d7e25"),
+        "numeroDeOrden":"Orden#6",
+        "direccion":"Direccion: Colonia kennedy cas 5 bloque 6",
+        "cantidadProductos":"Cantidad de productos: 2",
+        "total":300,
+        "estadoOrden": "inicio",
+        "idUsuario":"porIngresar",
+        "detalleEstado":[
+            {
+                "tipoDePago" : "tarjeta De Credito",
+                "ISV" : "18%",
+                "comisionAdministracion":"Comision Administracion: 80%",
+                "comisionMotorista":"Comision Motorista: 20%"
+            }
+        ]
+    },
+    {
+        "_id": ObjectId("611925dec79819a64e3d7e26"),
+        "numeroDeOrden":"Orden#7",
+        "direccion":"Direccion: Colonia kennedy cas 5 bloque 6",
+        "cantidadProductos":"Cantidad de productos: 2",
+        "total":300,
+        "estadoOrden": "inicio",
+        "idUsuario":"porIngresar",
+        "detalleEstado":[
+            {
+                "tipoDePago" : "tarjeta De Credito",
+                "ISV" : "18%",
+                "comisionAdministracion":"Comision Administracion: 80%",
+                "comisionMotorista":"Comision Motorista: 20%"
+            }
+        ]
+    },
+    {
+        "_id": ObjectId("611925dec79819a64e3d7e27"),
+        "numeroDeOrden":"Orden#8",
+        "direccion":"Direccion: Colonia kennedy cas 5 bloque 6",
+        "cantidadProductos":"Cantidad de productos: 2",
+        "total":300,
+        "estadoOrden": "inicio",
+        "idUsuario":"porIngresar",
+        "detalleEstado":[
+            {
+                "tipoDePago" : "tarjeta De Credito",
+                "ISV" : "18%",
+                "comisionAdministracion":"Comision Administracion: 80%",
+                "comisionMotorista":"Comision Motorista: 20%"
+            }
+        ]
+    },
+    {
+        "_id": ObjectId("611925dec79819a64e3d7e28"),
+        "numeroDeOrden":"Orden#9",
+        "direccion":"Direccion: Colonia kennedy cas 5 bloque 6",
+        "cantidadProductos":"Cantidad de productos: 2",
+        "total":300,
+        "estadoOrden": "inicio",
+        "idUsuario":"porIngresar",
+        "detalleEstado":[
+            {
+                "tipoDePago" : "tarjeta De Credito",
+                "ISV" : "18%",
+                "comisionAdministracion":"Comision Administracion: 80%",
+                "comisionMotorista":"Comision Motorista: 20%"
+            }
+        ]
+    },
+    {
+        "_id": ObjectId("611925dec79819a64e3d7e29"),
+        "numeroDeOrden":"Orden#10",
+        "direccion":"Direccion: Colonia kennedy cas 5 bloque 6",
+        "cantidadProductos":"Cantidad de productos: 2",
+        "total":300,
+        "estadoOrden": "inicio",
+        "idUsuario":"porIngresar",
+        "detalleEstado":[
+            {
+                "tipoDePago" : "tarjeta De Credito",
+                "ISV" : "18%",
+                "comisionAdministracion":"Comision Administracion: 80%",
+                "comisionMotorista":"Comision Motorista: 20%"
+            }
+        ]
+    },
+    {
+        "_id": ObjectId("611925dec79819a64e3d7e30"),
+        "numeroDeOrden":"Orden#11",
+        "direccion":"Direccion: Colonia kennedy cas 5 bloque 6",
+        "cantidadProductos":"Cantidad de productos: 2",
+        "total":300,
+        "estadoOrden": "inicio",
+        "idUsuario":"porIngresar",
+        "detalleEstado":[
+            {
+                "tipoDePago" : "tarjeta De Credito",
+                "ISV" : "18%",
+                "comisionAdministracion":"Comision Administracion: 80%",
+                "comisionMotorista":"Comision Motorista: 20%"
+            }
+        ]
+    }
+
+])

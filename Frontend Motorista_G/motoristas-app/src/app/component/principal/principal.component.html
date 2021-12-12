@@ -4,7 +4,7 @@
         <form [formGroup]="formularioLogin" >
             
             <input [(ngModel)]="usuario" class="form-control" formControlName="email" type="email" placeholder="Email"><br>
-            <input [(ngModel)]="contrasena" class="form-control"  formControlName="apellido" type="text" placeholder="Contrasena"><br>
+            <input [(ngModel)]="contrasena" class="form-control"  formControlName="apellido" type="password" placeholder="Contrasena"><br>
             <button class="form-control mb-3" (click)= "logiarse()">iniciar cesion</button>
             <button class="form-control mb-3"> registrarse</button>
         </form>
