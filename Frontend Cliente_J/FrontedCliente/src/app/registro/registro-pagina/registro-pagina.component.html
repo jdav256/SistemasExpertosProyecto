@@ -1,50 +1,102 @@
-<div id="registr" class="p-4" style="height: 94.5vh">
-    <div class="container" style="padding: 10rem;" >
-        
-            <h1 class="mx-auto text-white">Registro de Usuarios</h1>
-            <div class="row mb-4 mt-4">
-                <div class="col-2">
-                    <label for="" class="text-white" 
-                    style="font-size: 1.5rem; float: right;">Correo:</label>
+
+    <div class="container-fluid m-4">
+            <div class="row">
+                <div class="col-sm-2">
+
                 </div>
-                <div class="col-10">
+                <div class="col-8">
+                    <h1 class="text-white text-center">Registro de Usuarios</h1>
+                </div>
+                
+            </div>
+            <div class="row mb-4 mt-4">
+                <div class="col-sm-2">
+
+                </div>
+                <div class="col-8">
+                    <label for="" class="text-white" 
+                    style="font-size: 1.5rem; float: left;">Correo:</label>
+                </div>
+                <div class="col-sm-2">
+
+                </div>
+                <div class="col-sm-2">
+
+                </div>
+                <div class="col-8">
                     <input type="text" [(ngModel)]="correo" class="form-control" placeholder="Correo@correo.com">
+                </div>
+                <div class="col-sm-2">
+                    
                 </div>
             </div>
             <div class="row mb-4">
-                <div class="col-2">
-                    <label for="" class="text-white" 
-                    style="font-size: 1.5rem; float: right;">Nombre:</label>
+                <div class="col-sm-2">
+
                 </div>
-                <div class="col-10">
+                <div class="col-8">
+                    <label for="" class="text-white" 
+                    style="font-size: 1.5rem; float: left;">Nombre:</label>
+                </div>
+                <div class="col-sm-2">
+                </div>
+                <div class="col-sm-2">
+                </div>
+                <div class="col-8">
                     <input type="text" [(ngModel)]="name" class="form-control" placeholder="nombre y apellido">
                 </div>
+                <div class="col-sm-2">
+                    
+                </div>
             </div>
             <div class="row mb-2">
-                <div class="col-2">
-                    <label for="" class="text-white" style="font-size: 1.5rem; float: right;">Password:</label>
+                <div class="col-sm-2">
                 </div>
-                <div class="col-10">
+                <div class="col-8">
+                    <label for="" class="text-white" style="font-size: 1.5rem; float: left;">Password:</label>
+                </div>
+                <div class="col-sm-2">
+                </div>
+                <div class="col-sm-2">
+                </div>
+                <div class="col-8">
                     <input type="password" [(ngModel)]="password" class="form-control" placeholder="Password">
                 </div>
+                <div class="col-sm-2">
+                </div>
             </div>
             <div class="row mb-2">
-                <div class="col-2">
-                    <label for="" class="text-white" style="font-size: 1.5rem; float: right;">Confirmar:</label>
+                <div class="col-sm-2">
                 </div>
-                <div class="col-10">
+                <div class="col-8">
+                    <label for="" class="text-white" style="font-size: 1.5rem; float: left;">Confirmar:</label>
+                </div>
+                <div class="col-sm-2">
+                </div>
+                <div class="col-sm-2">
+                </div>
+                <div class="col-8">
                     <input type="password" [(ngModel)]="confirmar" class="form-control" placeholder="Password">
+                </div>
+                <div class="col-sm-2">
                 </div>
             </div>
             
-            <div class="row">
-                <br>
-                <button class="btn btn-primary mx-4  " style="font-size: 1.5rem" (click)="registrarse()" >Registrarse</button>
-                <button class="btn btn-danger mx-4 " style="font-size: 1.5rem" (click)="cancelar()">Cancelar</button>
+            <div class="row mt-4">
+                <div class="col-sm-4">
+
+                </div>
+                <div class="col-6 col-sm-4">
+                    <button class="btn btn-primary" style="font-size: 1.5rem" (click)="registrarse()" >Registrarse</button>
+                    
+                </div>
+                <div class="col-6 col-sm-4">
+                    <button class="btn btn-danger" style="font-size: 1.5rem" (click)="cancelar()">Cancelar</button>
+                </div>
+                
+                
             </div>
             
             
         
     </div>
-    
-</div>

@@ -1,35 +1,71 @@
-<div id="registr" class="p-4" style="height: 94.5vh">
-    <div class="container" style="padding: 10rem;" >
+
+    <div class="container-fluid m-4"  >
         
-            <h1 class="mx-auto text-white">Registro de Usuarios</h1>
-            <div class="row mb-4 mt-4">
-                <div class="col-2">
-                    <label for="" class="text-white" 
-                    style="font-size: 1.5rem; float: right;">Correo:</label>
-                </div>
-                <div class="col-8">
-                    <input type="text" [(ngModel)]="correo" class="form-control" placeholder="Correo@correo.com">
-                </div>
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-8">
+                <h1 class="text-center text-white">Registro de Usuarios</h1>
             </div>
-            <div class="row mb-2">
-                <div class="col-2">
-                    <label for="" class="text-white" style="font-size: 1.5rem; float: right;">Password:</label>
-                </div>
-                <div class="col-8">
-                    <input type="password" [(ngModel)]="password" class="form-control" placeholder="Password">
-                </div>
+            <div class="col-sm-2"></div>
+        </div>
+        
+        <div class="row mb-4 mt-4">
+            <div class="col-sm-2">
+
             </div>
-            <br>
-            <br>
-            
-            <div class="row">
-                <br>
+            <div class="col-8">
+                <label for="" class="text-white" style="font-size: 1.5rem; float: left;">Correo:</label>
+            </div>
+            <div class="col-sm-2">
+
+            </div>
+            <div class="col-sm-2">
+
+            </div>
+            <div class="col-8">
+                <input type="text" [(ngModel)]="correo" class="form-control" placeholder="Correo@correo.com">
+            </div>
+            <div class="col-sm-2">
+
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-sm-2">
+
+            </div>
+            <div class="col-8">
+                <label for="" class="text-white" style="font-size: 1.5rem; float: left;">Password:</label>
+            </div>
+            <div class="col-sm-2">
+
+            </div>
+            <div class="col-sm-2">
+
+            </div>
+            <div class="col-8">
+                <input type="password" [(ngModel)]="password" class="form-control" placeholder="Password">
+            </div>
+            <div class="col-sm-2">
+
+            </div>
+        </div>
+        <br>
+        <br>
+        
+        <div class="row d-flex justify-content-around">
+            <div class="col-sm-4">
+
+            </div>
+            <div class="col-6 col-sm-4">
                 <button class="btn btn-primary mx-4  " style="font-size: 1.5rem" (click)="login()" >Login</button>
+            </div>
+            <div class="col-6 col-sm-4">
                 <button class="btn btn-danger mx-4 " style="font-size: 1.5rem" (click)="cancelar()">Cancelar</button>
             </div>
             
             
+        </div>
+        
+        
         
     </div>
-    
-</div>
