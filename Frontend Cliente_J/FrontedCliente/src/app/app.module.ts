@@ -17,7 +17,8 @@ import {HttpClientModule} from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CarouselComponent } from './paginaPricipal/carousel/carousel.component';
 import { IvyCarouselModule } from 'angular-responsive-carousel';
-import { TiendasComponent } from './paginaPricipal/tiendas/tiendas.component';
+import { PaginaTiendaComponent } from './paginaTienda/pagina-tienda/pagina-tienda.component';
+import { PaginaCarritoComponent } from './paginaCarrito/pagina-carrito/pagina-carrito.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { TiendasComponent } from './paginaPricipal/tiendas/tiendas.component';
     Contenido1Component,
     PrimerEncabezadoComponent,
     RegistroPaginaComponent, 
-    CarouselComponent, TiendasComponent,
+    CarouselComponent, 
+    PaginaTiendaComponent, PaginaCarritoComponent,
     
   ],
   imports: [

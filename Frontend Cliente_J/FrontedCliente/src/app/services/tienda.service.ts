@@ -15,5 +15,11 @@ export class TiendaService {
   obtenerTiendasCategoria(categoria):Observable<any>{
     return this.httpClient.get(`http://localhost:8888/tiendas/${categoria}`,{});
   }
+  getLocalStore():any{
+    return JSON.parse(localStorage.getItem('tienda'));
+  }
+  salirTienda(){
+    return localStorage.removeItem('tienda');
+  }
 
 }

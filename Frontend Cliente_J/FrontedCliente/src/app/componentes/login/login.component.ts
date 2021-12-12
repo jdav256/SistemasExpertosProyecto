@@ -26,8 +26,10 @@ export class LoginComponent implements OnInit {
     .subscribe(
       res=>{
         console.log(res);
-        if(res==""){
-
+        if(res.message!=null){
+            alert('Usuario y contrasena no coinciden');
+            this.correo = "";
+            this.password = "";
         }else{
           localStorage.setItem('usuario',JSON.stringify(res));
           this.router.navigate(['usuario']);  

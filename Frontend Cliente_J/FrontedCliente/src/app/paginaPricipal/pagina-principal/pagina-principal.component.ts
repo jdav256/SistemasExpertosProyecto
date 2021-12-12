@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import { TiendaService } from 'src/app/services/tienda.service';
 import { CarouselComponent } from '../carousel/carousel.component';
 
@@ -13,7 +14,7 @@ export class PaginaPrincipalComponent implements OnInit {
   categoriaS:String="";
   tiendas:Array<any>=[];
   
-  constructor(private tiendaService:TiendaService) { }
+  constructor(private tiendaService:TiendaService, private router:Router) { }
 
   ngOnInit(): void {
     this.tiendaService.obtenerTiendas()
@@ -39,5 +40,11 @@ export class PaginaPrincipalComponent implements OnInit {
       });
   }
 
+  cargarTienda(i){
+    console.log("cargarTienda: ",this.tiendas[i])
+    localStorage.setItem('tienda',JSON.stringify(this.tiendas[i]));
+    this.router.navigate(['usuario/tienda']);
+
+  }
 
 }

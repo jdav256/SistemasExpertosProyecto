@@ -10,6 +10,12 @@ export class ProductoService {
   constructor(private httpClient:HttpClient) { }
 
   obtenerProductos():Observable<any>{
-    return this.httpClient.get('http://localhost:8888/usuarios',{});
+    return this.httpClient.get('http://localhost:8888/productos',{});
   }
+  
+  obtenerProductosDeTienda(id):Observable<any>{
+    return this.httpClient.get(`http://localhost:8888/productos/${id}`,{});
+  }
+  
+
 }

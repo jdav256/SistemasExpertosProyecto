@@ -1,0 +1,14 @@
+.modalPosicion{
+    z-index: 1000;
+    position: absolute;
+  }
+  .positiconCarousel{
+    z-index: 100;
+    position: absolute;
+  }
+  .visible{
+    display: block;
+  }
+.no-visible{
+    display: none;
+  }

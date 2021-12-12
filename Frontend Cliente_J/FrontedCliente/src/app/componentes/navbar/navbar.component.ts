@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { UsuarioService } from 'src/app/services/usuario.service';
 
 @Component({
@@ -8,10 +9,20 @@ import { UsuarioService } from 'src/app/services/usuario.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  
-  
+  faShoppingCart = faShoppingCart
+  urlActiva:String="/"
   
   constructor(public router:Router, private usuarioService:UsuarioService) { 
+    this.router.events.subscribe((e) => {
+      if (e instanceof NavigationEnd) {
+        console.log(e.url);
+        this.urlActiva=e.url;
+        console.log(this.urlActiva.substring(0,8));
+      }
+    });
+    
+    
+    
   }
 
   ngOnInit(): void {
